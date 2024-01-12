@@ -1,0 +1,28 @@
+mysql : 
+  port : "3306"
+  host: "host.docker.internal"
+  database : "article"
+  user : "root"
+  password : "1sampai8"
+  path_migrate: file:./db/migration
+redis :
+  host: "host.docker.internal"
+  port : "6379"
+  max_connection: 80
+  username: ""
+  password: ""
+  database: 0
+  expire : 24
+server :
+  port: "8000"
+  log_level: "debug"
+  prefork:      false
+  strict_routing: false
+  case_sensitive: false
+  body_limit: 4 * 1024 * 1024
+  base_path: ""
+middleware :
+  allows_origin : "*"
+
+
+static_path : "./temp"
